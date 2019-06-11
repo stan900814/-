@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>八卦图</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        box-sizing: border-box;
+        background: #eeeeee;
+    }
+
+    @keyframes x {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #八卦 {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        /* background: black; */
+        border-radius: 50%;
+        animation: x 5s infinite linear;
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    #八卦>div:first-child {
+        /* border: 1px solid red; */
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        background: white;
+        /* border-radius: 50%; */
+    }
+
+    #八卦>div:nth-child(2) {
+        /* border: 1px solid green; */
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        left: 100px;
+        margin-left: -50px;
+        background: black;
+        /* border-radius: 50%; */
+    }
+
+    #八卦>div:nth-child(3) {
+        /* border: 1px solid red; */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        left: 25px;
+        background: white;
+    }
+
+    #八卦>div:nth-child(4) {
+        /* border: 1px solid yellow; */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 25px;
+        background: black;
+    }
+
+    #八卦>div:nth-child(5) {
+        width: 10px;
+        height: 10px;
+        /* border: 1px solid red; */
+        border-radius: 50%;
+        position: absolute;
+        left: 35px;
+        bottom: 20px;
+        background: white;
+    }
+
+    #八卦>div:nth-child(6) {
+        width: 10px;
+        height: 10px;
+        /* border: 1px solid red; */
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        left: 50px;
+        top: 20px;
+
+    }
+
+    #八卦-wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div id="八卦-wrapper">
+        <div id="八卦">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+    </div>
+</body>
+
+</html>
